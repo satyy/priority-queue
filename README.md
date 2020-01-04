@@ -49,9 +49,10 @@ http://127.0.0.1:8088/swagger-ui.html
 3. <b>GET</b>      /pqueue/contain/{data}         - check if `data` is present in priority queue.
 4. <b>GET</b>      /pqueue/all                    - get all the entries in the priority queue.
 5. <b>GET</b>      /pqueue/pop                    - pop element with highest priority.
-6. <b>PUT</b>      /pqueue/insert/{data}          - insert `data` in the priority queue with default priority `5`.
-7. <b>PUT</b>      /pqueue/insert                 - insert data with priority atatched to this entry. Both should be part of json payload. For e.g <b>{ "data": "p9", "priority": 9 }</b> stores data "p9" with priority 9.
-8. <b>DELETE</b>   /pqueue/delete/{data}          - remove `data` from priority queue. 
+6. <b>GET</b>      /pqueue/peek                   - peek top element with highest priority.
+7. <b>PUT</b>      /pqueue/insert/{data}          - insert `data` in the priority queue with default priority `5`.
+8. <b>PUT</b>      /pqueue/insert                 - insert data with priority atatched to this entry. Both should be part of json payload. For e.g <b>{ "data": "p9", "priority": 9 }</b> stores data "p9" with priority 9.
+9. <b>DELETE</b>   /pqueue/delete/{data}          - remove `data` from priority queue. 
 </pre>
 
 ### Port Used 
