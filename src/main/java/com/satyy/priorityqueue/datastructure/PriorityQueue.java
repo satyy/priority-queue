@@ -11,11 +11,9 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-/**
- * @author Satyam Singh (satyamsingh00@gmail.com)
- */
 
 /**
+ * @author Satyam Singh (satyamsingh00@gmail.com)
  * Priority queue data structure which maintains element in the decreasing order of priority
  * assigned to those elements. This data structure uses max heap to maintain priority queue.
  * @param <T> Type of data type stored in the queue.
@@ -34,8 +32,8 @@ public class PriorityQueue<T> implements PQueue<T>{
      * @throws Exception
      */
     @Override
-    public void insert(final T o) throws Exception {
-        this.insert(5, o);
+    public void enqueue(final T o) throws Exception {
+        this.enqueue(5, o);
     }
 
     /**
@@ -46,7 +44,7 @@ public class PriorityQueue<T> implements PQueue<T>{
      * TODO fix type of exception
      */
     @Override
-    public void insert(final int priority, final T o) throws Exception{
+    public void enqueue(final int priority, final T o) throws Exception{
         if (priority < 0) {
             throw new IllegalArgumentException("Priority should be greater than or equal to 0");
         }
@@ -59,7 +57,7 @@ public class PriorityQueue<T> implements PQueue<T>{
      * @return true id element is present and deleted or else, false
      */
     @Override
-    public boolean delete(final T o) {
+    public boolean remove(final T o) {
         return queue.delete(new Entry<T>(-1, o));
     }
 
@@ -68,8 +66,17 @@ public class PriorityQueue<T> implements PQueue<T>{
      * @return element with highest priority
      */
     @Override
-    public T pop() {
+    public T dequeue() {
         return queue.pop().getData();
+    }
+
+    /**
+     * Peek the top of Priority Queue.
+     * @return top element without removing it from the queue.
+     */
+    @Override
+    public T peek() {
+        return queue.peek().getData();
     }
 
     /**

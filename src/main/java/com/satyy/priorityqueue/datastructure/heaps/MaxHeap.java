@@ -3,11 +3,9 @@ package com.satyy.priorityqueue.datastructure.heaps;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author Satyam Singh (satyamsingh00@gmail.com)
- */
 
 /**
+ * @author Satyam Singh (satyamsingh00@gmail.com)
  * 'Max Heap' data structure implementation where root node is always greater than its child.
  * This gives us Root of tree as the greatest element in this data structure.
  * Internally, this implementation of max heap, data are stored in ArrayList where,
@@ -61,10 +59,10 @@ public class MaxHeap<T extends Comparable<T>> implements Heap<T>, HeapSort {
     }
 
     /**
-     * Pop element with max value in the queue which basically is the top(root) element in the
+     * Pop element with max value in the heap which basically is the top(root) element in the
      * max heap.
      * @return element having max value.
-     * @throws IllegalStateException if queue is empty
+     * @throws IllegalStateException if heap is empty
      */
     @Override
     public T pop() throws IllegalStateException {
@@ -74,6 +72,19 @@ public class MaxHeap<T extends Comparable<T>> implements Heap<T>, HeapSort {
         final T poppedValue = heapData.get(0);
         this.delete(poppedValue);
         return poppedValue;
+    }
+
+    /**
+     * Peek the top element in heap.
+     * @return the top element from the heap.
+     * @throws IllegalStateException if heap is empty
+     */
+    @Override
+    public T peek() throws IllegalStateException{
+        if (isEmpty())
+            throw new IllegalStateException("Peek: Empty Heap");
+
+        return heapData.get(0);
     }
 
     /**

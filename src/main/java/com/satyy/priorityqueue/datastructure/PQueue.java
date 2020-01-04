@@ -6,12 +6,13 @@ import java.util.List;
  * @author Satyam Singh (satyamsingh00@gmail.com)
  */
 public interface PQueue<T> {
-    void insert(T o) throws Exception;
-    void insert(int priority, T o) throws Exception;
-    boolean delete(T o);
+    void enqueue(T o) throws Exception;
+    void enqueue(int priority, T o) throws Exception;
+    boolean remove(T o);
     boolean isEmpty();
     boolean contains(T o);
     int size();
-    T pop();
+    T dequeue();
+    T peek();
     List<T> getAllData();
 }

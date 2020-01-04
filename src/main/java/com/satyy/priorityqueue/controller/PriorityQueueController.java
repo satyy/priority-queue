@@ -101,6 +101,15 @@ public class PriorityQueueController {
     }
 
     /**
+     * Peek top element in queue.
+     * @return top element without removing it from the queue.
+     */
+    @GetMapping("/peek")
+    public String peekElement() {
+        return facade.peek();
+    }
+
+    /**
      * Get all the strings data as a list, from the priority queue.
      * This api gives back data as how internally it is stored in the queue and,
      * the first element is the data with highest priority at that point in the queue.

@@ -23,19 +23,23 @@ public class PriorityQueueFacade {
     }
 
     public void insert(final String data) throws Exception {
-        queue.insert(data);
+        queue.enqueue(data);
     }
 
     public void insert(final QueueModel model) throws Exception {
-        queue.insert(model.getPriority(), model.getData());
+        queue.enqueue(model.getPriority(), model.getData());
     }
 
     public boolean delete(final String data) {
-        return queue.delete(data);
+        return queue.remove(data);
     }
 
     public String pop() {
-        return queue.pop();
+        return queue.dequeue();
+    }
+
+    public String peek() {
+        return queue.peek();
     }
 
     public boolean isQueueEmpty() {

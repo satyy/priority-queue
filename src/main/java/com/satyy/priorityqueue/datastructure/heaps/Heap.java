@@ -9,6 +9,7 @@ public interface Heap<T extends Comparable<T>> {
     void insert(T o);
     boolean delete(T o);
     T pop();
+    T peek();
     boolean isEmpty();
     boolean contains(T o);
     int size();
