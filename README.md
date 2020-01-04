@@ -1,7 +1,7 @@
 # Priority-Queue & Max Heap Data Structure
-- Implementation of Max Heap
+- Implementation of Max-Heap
 - Implementation of Priority Queue using Max-Heap
-- Use of Implementated Priority Queue to store strings based on priority assigned to those string.
+- Use of Implementated Priority Queue to store strings with priority assigned to each string.
 - Swagger-ui for the API's.
 
 ## About Max-Heap
