@@ -14,14 +14,22 @@
  2. Elements are consumed from this data structure based on the priority associated to it and not the order in which it is inserted.
  3. The element with highest priority is consumed first and so on.
  4. This property makes Priority Queue as one of the most suitable data structure to store and schedule jobs/threads based on priority         associated to them.
- 
- ## Performance
- 
- ## Build and Run
+
+## Performance
+```
+   Insert - O(logN)
+   Delete - O(logN)
+   Pop    - O(1)
+``` 
+
+## About Application
+This application is congigured to store String objects in the priority queue.
+  
+### Build and Run
 1. Checkout repo.
 2. run cmd `sh run-app.sh`
 
-## Verify Priority-Queue
+### Verify Priority-Queue
 The application exposed few api's to add, remove (String)data and, perform other operation on  Priority queue
 - You can use the `swagger-ui` to make call to the api's or perform `curl` request to the api's exposed.
 
