@@ -23,7 +23,7 @@
 ``` 
 
 ## About Application
-- This Priority queue implementation supports object of any type which implements **Comparable** interface and can be compared.
+- This Priority queue implementation supports object which implements **Comparable** interface.
 - This application is configured to store **String** objects in the priority queue.
   
 ### Build and Run
