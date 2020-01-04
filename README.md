@@ -23,7 +23,8 @@
 ``` 
 
 ## About Application
-This application is congigured to store String objects in the priority queue.
+- This Priority queue implementation supports object of any type which implements **Comparable** interface and can be compared.
+- This application is configured to store **String** objects in the priority queue.
   
 ### Build and Run
 1. Checkout repo.
